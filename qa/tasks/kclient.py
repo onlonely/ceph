@@ -89,7 +89,7 @@ def task(ctx, config):
             continue
 
         # check if we are using distro or test kernel and pass options to mount
-        kernel_sha = ctx.config.get['kernel']['sha1']
+        kernel_sha = ctx.config.get('kernel')['sha1']
         if kernel_sha == 'distro':
             is_distro_kernel = True
         else:
